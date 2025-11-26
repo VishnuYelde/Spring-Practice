@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="shop" class="consInjectionMap.Shop">
+		<constructor-arg value="Mobile shop"></constructor-arg>
+		<constructor-arg name="items">
+			<map>
+				<entry key="PocoX7" value="24000"></entry>
+				<entry key="S25 Ultra" value="125000"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+
+</beans>
