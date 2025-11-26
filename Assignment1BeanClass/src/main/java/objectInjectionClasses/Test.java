@@ -1,4 +1,4 @@
-package injectionClasses;
+package objectInjectionClasses;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

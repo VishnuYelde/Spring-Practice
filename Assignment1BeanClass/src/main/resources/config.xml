@@ -5,12 +5,12 @@
            http://www.springframework.org/schema/beans
            https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="car" class="injectionClasses.Car">
+    <bean id="car" class="objectInjectionClasses.Car">
     	<property name="brand" value="Thar"></property>
 		<property name="price" value="1500000"></property>
 		<property name="engine" ref="engine"></property>
     </bean>
-    <bean id="engine" class="injectionClasses.Engine">
+    <bean id="engine" class="objectInjectionClasses.Engine">
 		<property name="cc" value="900"></property>    	
     </bean>
 </beans>

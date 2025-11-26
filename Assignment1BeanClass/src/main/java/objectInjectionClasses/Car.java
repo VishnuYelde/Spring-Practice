@@ -1,4 +1,4 @@
-package injectionClasses;
+package objectInjectionClasses;
 
 public class Car {
 	private String brand;

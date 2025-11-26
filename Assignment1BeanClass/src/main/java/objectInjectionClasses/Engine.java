@@ -1,4 +1,4 @@
-package injectionClasses;
+package objectInjectionClasses;
 
 public class Engine {
 	private int cc;
