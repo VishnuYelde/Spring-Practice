@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="shop" class="mapSetterInjection.Shop">
+    	<property name="name" value="Mobile"></property>
+		<property name="items">
+			<map>
+				<entry key="Poco X5" value="22000"></entry>
+				<entry key="S24 Ultra" value="95000"></entry>
+				<entry key="Google Pixel" value="45000"></entry>				
+			</map>
+		</property>
+    </bean>
+  
+</beans>
