@@ -9,5 +9,8 @@ public class Test {
 		
 		Student s1 = app.getBean(Student.class);
 		s1.display();
+		
+		Shop shop1 = app.getBean(Shop.class);
+		shop1.display();
 	}
 }
