@@ -10,7 +10,5 @@ public class Test {
 		Theater t1 = app.getBean(Theater.class);
 		t1.playMovie();
 		
-//		Kantara m1 = app.getBean(Kantara.class);
-//		m1.story();
 	}
 }
