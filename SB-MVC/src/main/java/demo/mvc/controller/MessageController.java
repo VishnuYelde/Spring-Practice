@@ -6,8 +6,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import demo.mvc.StudentDTO;
 import demo.mvc.UserDTO;
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 @Controller
 public class MessageController {
@@ -24,6 +27,7 @@ public class MessageController {
 		return "greet.jsp";
 	}
 
+	// For Register Page
 	@GetMapping("/reg")
 	public String getRegisterPage(Model model) {
 		System.out.println("Returing Register page");
@@ -31,7 +35,7 @@ public class MessageController {
 		return "register.jsp";
 	}
 
-	@PostMapping("/regis")
+	@PostMapping("/register")
 	public String registerUser(UserDTO udto) {
 		System.out.println(udto);
 		
@@ -49,13 +53,20 @@ public class MessageController {
 	@GetMapping("/send-data")
 	public ModelAndView sendDataUsingMV() {
 		ModelAndView mv = new ModelAndView("data.jsp");
+//		mv.setViewName("data.jsp");
 		mv.addObject("un", "Allen");
 		mv.addObject("ua", 50);
 
 		return mv;
 	}
-
-	@PostMapping("/log")
+	
+	// For login page
+	@GetMapping("/log")
+	public String showLoginPage() {
+	    return "login.jsp"; 
+	}
+	
+	@PostMapping("/login")
 	public String login(HttpServletRequest request, Model model) {
 		String username = request.getParameter("un");
 		String password = request.getParameter("pwd");
@@ -68,6 +79,19 @@ public class MessageController {
 			model.addAttribute("msg", "Invalid Details");
 			return "login.jsp";
 		}
-
 	}
+	
+	@GetMapping("/stud")
+	public String getProductPage(Model model) {
+		System.out.println("Loading for Product Page/Data... ");
+		model.addAttribute("sdto", new StudentDTO());
+		return "student.jsp";
+	}
+	
+	@PostMapping("/student")
+	public String postMethodName(StudentDTO sdto) {
+		System.out.println(sdto);
+		return "student.jsp";
+	}
+	
 }
